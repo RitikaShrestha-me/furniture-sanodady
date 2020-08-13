@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome | Oasis Furniture</title>
+	<meta name="viewport" content="width=device-width, initial-scale= 1.0">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div id="image">
+		<img src="logo.jpeg" id="logo">
+	</div>
+	<div class="face">
+		<div class="eyes">
+			<div class="eye"></div>
+			<div class="eye"></div>
+		</div>
+	</div>
+
+	<script>
+		document.querySelector('body').addEventListener('mousemove', eyeball);
+		function eyeball(){
+			var eye = document.querySelectorAll('.eye');
+			eye.forEach(function(eye){
+				let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+			let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+			let radian = Math.atan2(event.pageX - x, event.pageY- y);
+			let rot = (radian * (180/ Math.PI) * -1) + 270;
+			eye.style.transform = "rotate(" + rot + "deg)";
+			})
+		}
+	</script>
+	
+	<div class="fixed">
+		<p id="top-message"><strong>HELLO, We Are The </strong></p>
+		<p id="oasis">OASIS</p>
+		<p id="bottom-message"><strong>Of Home Decor</strong></p>
+	</div>
+	
+	<div id="button">
+		<button id="welcome" onclick="window.location.href = 'home.html'" style="border: 1;">WELCOME</button>
+	</div>
+
+	<div class="refer">
+		<ul>
+			<li>
+				<a href="https://www.facebook.com/"><img class="link" src="https://img.icons8.com/doodle/48/000000/facebook-new.png"/></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/"><img class="link" src="https://img.icons8.com/office/40/000000/instagram-new.png"/></a>
+			</li>
+			<li>
+				<a href="https://www.gmail.com/"><img class="link" src="https://img.icons8.com/dusk/64/000000/gmail-login.png"/></a>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

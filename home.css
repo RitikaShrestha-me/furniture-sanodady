@@ -1,0 +1,214 @@
+/*
+"https://fonts.googleapis.com/css?family=Tangerine"
+*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo&display=swap');
+
+
+*{
+	margin: 0;
+	/*border: solid;*/
+	padding: 0;
+}
+body{
+	width: 100%;
+	font-family: "Georgia";
+	color: white;
+	background-image: url("living_sofa.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-height: 100vh;
+}
+
+#menu-btn{
+	float: right;
+	padding: 5px;
+	border: none;
+	filter: invert(1);
+	border-radius: 7px;
+	display: inline-block;
+}
+
+
+header{
+	padding-top: 15px;
+	z-index: 1;
+	width: 100%;
+	color: white;
+	display: block;
+	height: 100vh;
+}
+
+#menuBar{
+	top: 0;
+	padding: 8px 60px;
+	height: 10vh;
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+	background-color: rgba(0,0,0,.8);
+}
+
+#carousel{
+	padding-top: 20vh;	
+	height: 92vh;
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+#title{
+	font-family: "Samantha";
+	font-variant: small-caps;
+	font-size: 3em;
+}
+#first{
+	font-family: 'Bilbo', cursive;
+	font-size: 1.75em;
+}
+
+#shopNow{
+	padding: 3px 10px;
+	text-decoration: blink;
+	border-radius: 15px;
+	&:hover{
+		text-shadow: 0px 5px 4px rgba(0, 0, 0, .9);
+	}
+}
+
+marquee{
+	font-size: 25px;
+}
+
+#content, #menuBar, aside, #text, footer, footer ul, #Inspirations{
+	display: block;
+	margin: 0 auto;
+}
+
+#content{
+	padding: 5px 25px;
+	max-width: 90vw;
+	background-color: rgba(0,0,0,.7);
+	border-radius: 15px;
+}
+
+aside{
+	padding: 15px 5px 15px 0;
+	float: top;
+	text-align: center;
+	position: relative;
+	max-width: 700px;
+	border-radius: 25%;
+	background-color: none;
+	padding-top: -50px;
+}
+
+#shopByCategory{
+	color: brown;
+	margin: 15px 0px;
+	font-variant: small-caps;
+	text-decoration: underline;
+}
+
+aside ul li{
+	padding: 10px 15px;
+}
+
+
+#text{
+	padding: 15px;
+	float: left;
+	max-width: 650px;
+}
+
+#description{
+	padding: 10px;
+	z-index: 9;
+}
+
+h2{
+	font-size: 2em;
+	display: inline-block;
+	font-family: Georgia,serif;
+	font-variant: small-caps;
+}
+
+
+#Inspirations ul{
+	display: flex;
+}
+#Inspirations ul li{
+	flex: 1;
+	margin: 5px 8px;
+	border: 1px solid;
+}
+
+#top-picks ul{
+	display: flex;
+}
+#top-picks ul li{
+	border: 1px dotted;
+	font-family: 'Dancing Script', cursive;
+	display: block;
+	flex: 1;
+}
+
+@media only screen and (max-width: 767px) {
+	
+}
+
+.contact{
+	display: flex;
+	margin: 30px auto;
+	width: 90%;
+}
+
+#proposalRequest{
+	text-align: center;
+	padding: 40px;
+	flex: 1;
+	background-color: none;
+}
+
+#contactInfo{
+	width: 60vw;
+	margin: auto;
+	text-align: left;
+	border-left: 1px solid; 
+	flex: 1;
+	padding: 20px 50px;
+	color: white;
+	background-color: none;
+}
+
+input{
+	width: 300px;
+	padding: 0px 20px;
+	margin: 5px;
+	line-height: 30px;
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+	border: none;
+	border-radius: 15px;
+	border-bottom: groove;
+}
+
+footer{
+	background-color: white;
+	color: black;
+	width: 100%;
+	padding-top: 5px;
+	border-top: 1px solid;
+	text-align: center;
+	bottom: 0;
+}
+
+li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 5px;
+}
