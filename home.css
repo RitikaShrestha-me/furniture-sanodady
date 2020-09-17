@@ -86,6 +86,8 @@ img{
 	padding: 3px 10px;
 	text-decoration: blink;
 	border-radius: 15px;
+	color: rgb(2, 3, 95);
+	font-weight: 600;
 }
 
 /* Moving Text */
@@ -217,17 +219,35 @@ h2{
 	color: white;
 }
 
-input{
-	max-width: 300px;
-	padding: 0px 20px;
-	margin: 5px;
+
+.text-input{
+	width: 250px;
 	line-height: 30px;
 	background-color: #222;
+	margin: 5px;
+	padding: 0 15px;
 	color: #fff;
-	text-align: center;
 	border: none;
+	border-radius: 10px;
+}
+
+.text-input:hover{
+	width: 300px;
+	transition: width 500ms;
+}
+
+.text-input:focus, .proposal-button:focus{
+	outline: none;
+}
+
+.proposal-button{
+	max-width: 300px;
+	min-width: 150px;
+	background-color: rgba(255, 255, 255, 1);
+	color: rgb(2, 3, 95);
 	border-radius: 15px;
-	border-bottom: groove;
+	padding: 2px 0;
+	font-weight: 700;
 }
 
 .bottom{
@@ -259,5 +279,11 @@ input{
 		max-width: 100vw;
 		border: none;
 		background-color: rgba(2, 0, 0, 0.466);
+	}
+	.text-input{
+		max-width: 250px;
+	}
+	.text-input:hover{
+		transform: scaleX(1.0);
 	}
 }
