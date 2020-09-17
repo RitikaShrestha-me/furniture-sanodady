@@ -56,7 +56,7 @@
 /* Initial landing Page */
 .carousel{
 	padding-top: 25vh;	
-	height: 92vh;
+	height: 96vh;
 	top: 0;
 	margin: 0;
 	text-align: center;
@@ -92,7 +92,8 @@ img{
 
 /* Moving Text */
 marquee{
-	font-size: 25px;
+	font-size: 20px;
+	background-color:  rgba(0,0,0,.3);
 }
 
 
@@ -214,7 +215,7 @@ h2{
 .contactinfo{
 	margin: auto;
 	line-height: 40px;
-	max-width: 60%;
+	max-width: 70%;
 	padding: 12px 0;
 	color: white;
 }
@@ -253,7 +254,8 @@ h2{
 .bottom{
 	color: white;
 	width: 100%;
-	padding-top: 5px;
+	font-size: 10px;
+	padding: 15px;
 	border-top: 1px solid;
 	text-align: center;
 	bottom: 0;
