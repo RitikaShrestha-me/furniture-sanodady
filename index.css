@@ -171,6 +171,7 @@
 			.face{
 				margin: 50px 10vw;
 				display: flex;
+				position: relative;
 				min-height: 150px;
 				width: 150px;
 				align-items: center;
@@ -184,7 +185,7 @@
 			.face::before{
 				content: '';
 				position: absolute;
-				top: 30vh;
+				top: 92px;
 				width: 70px;
 				height: 33px;
 				background: #b57700;
@@ -193,7 +194,7 @@
 			}
 
 			.face:hover::before{
-				top: 190px;
+				top: 100px;
 				width: 70px;
 				height: 10px;
 				background: #b57700;;

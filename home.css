@@ -6,23 +6,45 @@
 
 
 *{
-	margin: 0;
-	/*border: solid;*/
-	padding: 0;
-}
-body{
-	width: 100%;
-	font-family: "Georgia";
-	color: white;
-	background-image: url("living_sofa.jpg");
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-height: 100vh;
+	/* border: solid; */
+	box-sizing: border-box;
 }
 
-#menu-btn{
+/* Body */
+.contain{
+	width: 100vw;
+	font-family: "Georgia";
+	color: white;
+	margin: 0; 
+	padding: 0;
+	background-image: url("living_sofa.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+/* Landing Page */
+.top{
+	z-index: 1;
+	width: 100vw;
+	display: block;
+	height: 100vh;
+}
+
+/* Menubar */
+.menuBar{
+	top: 0;	
+	margin: 0;
+	padding: 12px 3vw;
+	height: 10vh;
+	width: 	100vw;
+	z-index: 10;
+	position: fixed;
+	background-color: rgba(0,0,0,.8);
+}
+
+/* Menu button */
+.menu-btn{
 	float: right;
 	padding: 5px;
 	border: none;
@@ -31,46 +53,36 @@ body{
 	display: inline-block;
 }
 
-
-header{
-	padding-top: 15px;
-	z-index: 1;
-	width: 100%;
-	color: white;
-	display: block;
-	height: 100vh;
-}
-
-#menuBar{
-	top: 0;
-	padding: 8px 60px;
-	height: 10vh;
-	width: 100%;
-	z-index: 10;
-	position: fixed;
-	background-color: rgba(0,0,0,.8);
-}
-
-#carousel{
-	padding-top: 20vh;	
+/* Initial landing Page */
+.carousel{
+	padding-top: 25vh;	
 	height: 92vh;
+	top: 0;
+	margin: 0;
 	text-align: center;
-	width: 100%;
-	overflow: hidden;
+	width: 100vw;
 }
 
+/* All Images can be pointed */
+img{
+	cursor: pointer;
+}
 
-#title{
+/* Center Title */
+.title{
 	font-family: "Samantha";
 	font-variant: small-caps;
 	font-size: 3em;
 }
-#first{
+
+/* Text below Title */
+.first{
 	font-family: 'Bilbo', cursive;
 	font-size: 1.75em;
 }
 
-#shopNow{
+/* Center Shop Now Button */
+.shopNow{
 	padding: 3px 10px;
 	text-decoration: blink;
 	border-radius: 15px;
@@ -79,54 +91,57 @@ header{
 	}
 }
 
+/* Moving Text */
 marquee{
 	font-size: 25px;
 }
 
-#content, #menuBar, aside, #text, footer, footer ul, #Inspirations{
+
+.content, .menuBar, .text,  footer, footer ul, .Inspirations{
 	display: block;
 	margin: 0 auto;
 }
 
-#content{
-	padding: 5px 25px;
-	max-width: 90vw;
-	background-color: rgba(0,0,0,.7);
-	border-radius: 15px;
+
+li{
+	list-style-type: none;
+	display: inline-block;
 }
 
-aside{
-	padding: 15px 5px 15px 0;
-	float: top;
+
+
+/* Whole Black Box with items */
+.content{
+	padding: 5px 25px;
+	max-width: 100vw;
+	background-color: rgba(0,0,0,.7);
+}
+
+.description{
+	padding: 10px;
+	z-index: 9;
+}
+
+.shopByCategory{
+	color: rgb(148, 2, 2);
+	margin: 40px auto 10px;
+	text-align: center;
+	font-variant: small-caps;
+}
+
+.category{
 	text-align: center;
 	position: relative;
-	max-width: 700px;
+	padding: 10px 0;
 	border-radius: 25%;
+	margin: auto;
 	background-color: none;
-	padding-top: -50px;
 }
 
-#shopByCategory{
-	color: brown;
-	margin: 15px 0px;
-	font-variant: small-caps;
-	text-decoration: underline;
-}
-
-aside ul li{
-	padding: 10px 15px;
-}
-
-
-#text{
+.text{
 	padding: 15px;
 	float: left;
 	max-width: 650px;
-}
-
-#description{
-	padding: 10px;
-	z-index: 9;
 }
 
 h2{
@@ -137,55 +152,76 @@ h2{
 }
 
 
-#Inspirations ul{
+.Inspirations ul{
 	display: flex;
+	overflow-x: scroll;
+	justify-content: space-around;
 }
-#Inspirations ul li{
+
+.inspiration{
+	width: 300px;
+	height: 300px;
 	flex: 1;
 	margin: 5px 8px;
 	border: 1px solid;
 }
 
-#top-picks ul{
-	display: flex;
+
+/* Top-picks */
+.top-picks{
+	clear: both;
 }
-#top-picks ul li{
-	border: 1px dotted;
+
+.top-picks ul{
+	display: flex;
+	overflow-x: scroll;
+}
+.top-picks ul li{
 	font-family: 'Dancing Script', cursive;
 	display: block;
 	flex: 1;
 }
-
-@media only screen and (max-width: 767px) {
-	
+.top-picks-image{
+	width: 250px;
+	height: 200px;
+	padding: 0 10px;
 }
 
 .contact{
 	display: flex;
 	margin: 30px auto;
-	width: 90%;
+	justify-content: space-around;
+	width: 95vw;
 }
 
-#proposalRequest{
+.proposalRequest{
 	text-align: center;
-	padding: 40px;
 	flex: 1;
+	max-width: 50%;
 	background-color: none;
 }
 
-#contactInfo{
-	width: 60vw;
-	margin: auto;
-	text-align: left;
-	border-left: 1px solid; 
+.contactInfobox{
 	flex: 1;
-	padding: 20px 50px;
-	color: white;
+	max-width: 50%;
 	background-color: none;
+	border-left: 1px solid; 
+}
+
+.contactInfobox h2{
+	padding: 0 20px;
+}
+
+.contactinfo{
+	margin: auto;
+	line-height: 40px;
+	max-width: 60%;
+	padding: 12px 0;
+	color: white;
 }
 
 input{
-	width: 300px;
+	max-width: 300px;
 	padding: 0px 20px;
 	margin: 5px;
 	line-height: 30px;
@@ -197,18 +233,34 @@ input{
 	border-bottom: groove;
 }
 
-footer{
-	background-color: white;
-	color: black;
+.bottom{
+	color: white;
 	width: 100%;
 	padding-top: 5px;
 	border-top: 1px solid;
 	text-align: center;
 	bottom: 0;
+	background-color: rgba(0,0,0,.8);
 }
 
-li{
-	list-style-type: none;
-	display: inline-block;
-	padding: 5px;
+
+@media screen and (max-width : 1024px){
+	.carousel{
+		padding-top: 40%;	
+	}
+}
+
+@media screen and (max-width : 700px){
+	.contact{
+		display: block;
+	}
+	.proposalRequest{
+		max-width: 100%;
+	}
+	.contactInfobox{
+		margin-top: 20px;
+		max-width: 100vw;
+		border: none;
+		background-color: rgba(2, 0, 0, 0.466);
+	}
 }
