@@ -1,0 +1,62 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container>h2{
+    margin: 1rem auto 2rem;
+}
+
+.form-group{
+    width: 40%;
+    line-height: 2;
+    text-align: left;
+    margin: 3rem auto;
+}
+
+.form-control{
+    width: 100%;
+    height: 25px;
+    font-size: 1rem;
+    padding: 0 5px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.form-control:focus{
+    outline: none;
+}
+
+.add-btn{
+    width: 30%;
+    font-size: 1rem;
+    font-weight: 800;
+    height: 40px;
+    border: none;
+    margin-top: 1rem;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(137, 146, 5);
+}
+.add-btn:hover{
+    transform: scale(1.02);
+}
+
+@media(max-width: 768px){
+    .container{
+        background-color: rgba(255, 255, 255, 0.753);
+    }
+    .form-group{
+        width: 90%;
+    }
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
