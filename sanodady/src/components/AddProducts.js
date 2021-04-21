@@ -1,5 +1,6 @@
 import {React, useState} from 'react'
 import '../styles/AddProduct.css';
+import { storage, db } from '../config/Config';
 
 export const AddProducts = () => {
 
@@ -8,7 +9,9 @@ export const AddProducts = () => {
     const [productImg, setProductImg] = useState(null);
     const [error, setError] = useState('');
 
-    const types = ['image/png', 'image/jpg', 'image/jpeg']
+    const types = ['image/png', 'image/jpg', 'image/jpeg'] //Image Types
+
+    //Image Handler
     const productImgHandler = (e) => {
         let selectedFile = e.target.files[0];
         if(selectedFile && types.includes(selectedFile.type)){
@@ -21,9 +24,31 @@ export const AddProducts = () => {
         }
     }
 
+    //Add Product
     const addProduct = (e) => {
         e.preventDefault();
-        console.log(productName, productPrice, productImg);
+        // console.log(productName, productPrice, productImg);
+        const uploadTask = storage().ref(`productImages/${productImg.name}`).put(productImg);
+        uploadTask.on('state_changed', snapshot => {
+            const progress = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+            console.log(progress);
+        }, err=>{
+            setError(err.message);
+        }, ()=>{
+            storage().ref('productImages').child(productImg.name).getDownloadURL().then(url=>{
+                db.collection('products').add({
+                    productName: productName,
+                    productPrice: Number(productPrice),
+                    productImg: url
+                }).then(()=>{
+                    setProductName('');
+                    setProductPrice(0);
+                    setProductImg('');
+                    setError('');
+                    document.getElementById('file').value = '';
+                }).catch(err=> setError(err.message));
+            });
+        })
     }
 
     return (
@@ -41,7 +66,7 @@ export const AddProducts = () => {
                     onChange = {(e)=> setProductPrice(e.target.value)} value={productPrice} 
                 /><br/><br/>
                 <label htmlFor='product-img'>Product Image:</label><br/>
-                <input type='file' className='form-control'
+                <input type='file' className='form-control' id='file' required
                     onChange = {productImgHandler}
                 /><br/><br/>
                 <button className = 'btn add-btn'>ADD</button>
